@@ -1,0 +1,33 @@
+package gr.aueb.cf.ch5;
+
+import java.sql.SQLOutput;
+
+/**
+ * Υπερφόρτωση μεθόδων
+ */
+public class OverloadingApp {
+
+    public static void main(String[] args) {
+        System.out.println(add(1, 2));
+        System.out.println(add(1, 2, 3));
+        System.out.println(add(1L, 2));
+        System.out.println(add(1L,2L));
+
+    }
+
+    public static int add( int a, int b){
+        return a + b;
+    }
+
+    public static int add( int a, int b, int c){
+        return a + b + c; // μπορώ να έχω το ίδιο όνομα με διαφορετικές παραμέτρους
+            }
+
+    public static long add (long a, long b){
+        return a + b;
+    }
+
+    public static long add (long a, long b, long c){
+        return a + b+ c;
+    }
+}
